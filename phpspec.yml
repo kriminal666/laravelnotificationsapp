@@ -2,4 +2,4 @@ suites:
     main:
         namespace: LaravelNotificationApp
         psr4_prefix: LaravelNotificationApp
-        src_path: app
+        src_path: LaravelNotificationApp
