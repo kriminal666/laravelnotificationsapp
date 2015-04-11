@@ -12,6 +12,7 @@ class PlansController extends Controller {
     {
         //if user not logged go to login page
         $this->middleware('auth');
+
     }
 
 	/**
@@ -20,10 +21,22 @@ class PlansController extends Controller {
 	 * @return Response
 	 */
 	public function index()
-	{
-		//
+    {
+
         return view('plans');
 	}
+
+    /**
+     * get response from stripe
+     */
+    public function getToken(){
+        if (Input::has('stripeToken'))
+        {
+            $token = Input::get('stripeToken');
+            Auth::user()->subscription('basic')->create($token);
+        }
+        return view('plans');
+     }
 
 	/**
 	 * Show the form for creating a new resource.

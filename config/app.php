@@ -144,7 +144,7 @@ return [
 		'LaravelNotificationApp\Providers\ConfigServiceProvider',
 		'LaravelNotificationApp\Providers\EventServiceProvider',
 		'LaravelNotificationApp\Providers\RouteServiceProvider',
-
+        'Laravel\Cashier\CashierServiceProvider',
 	],
 
 	/*
