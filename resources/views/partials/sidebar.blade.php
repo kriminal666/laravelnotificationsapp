@@ -46,6 +46,30 @@
 
             <b class="arrow"></b>
         </li>
+        <!--Personal menu-->
+        <li class="">
+            <a href="#" class="dropdown-toggle">
+                <i class="menu-icon fa fa-pencil-square-o"></i>
+                <span class="menu-text"> Personal menu </span>
+
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+
+            <b class="arrow"></b>
+
+            <ul class="submenu">
+                <li class="">
+                    <a href="/plans">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        Plans
+                    </a>
+
+                    <b class="arrow"></b>
+                </li>
+            </ul>
+        </li>
+
+                <!--End Personal menu-->
 
         <li class="">
             <a href="#" class="dropdown-toggle">
