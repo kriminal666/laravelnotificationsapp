@@ -1,5 +1,7 @@
 <?php namespace LaravelNotificationApp\Http\Controllers\criminal;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 use LaravelNotificationApp\Http\Requests;
 use LaravelNotificationApp\Http\Controllers\Controller;
 
@@ -30,12 +32,15 @@ class PlansController extends Controller {
      * get response from stripe
      */
     public function getToken(){
-        if (Input::has('stripeToken'))
-        {
-            $token = Input::get('stripeToken');
-            Auth::user()->subscription('basic')->create($token);
-        }
-        return view('plans');
+
+        //dd(Input::all());
+        $token = Input::get('stripeToken');
+        Auth::user()->subscription('basic')->create($token);
+
+        return view('plans')->withMessage('Transaction successful');
+
+
+
      }
 
 	/**

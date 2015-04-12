@@ -6,7 +6,7 @@ class Kernel extends HttpKernel {
 
 	/**
 	 * The application's global HTTP middleware stack.
-	 *
+	 *'LaravelNotificationApp\Http\Middleware\VerifyCsrfToken',
 	 * @var array
 	 */
 	protected $middleware = [
@@ -15,7 +15,8 @@ class Kernel extends HttpKernel {
 		'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
 		'Illuminate\Session\Middleware\StartSession',
 		'Illuminate\View\Middleware\ShareErrorsFromSession',
-		'LaravelNotificationApp\Http\Middleware\VerifyCsrfToken',
+
+
 	];
 
 	/**

@@ -55,8 +55,8 @@
                         <form action="" method="POST">
                             <script
                                     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                    data-key="pk_test_sedSyhEwaV5PNjjtizZ40YY1"
-                                    data-amount="1000€"
+                                    data-key="pk_test_p6G8wxXZHtrnWGlWd78UZCYo"
+                                    data-amount="1000"
                                     data-name="Demo Site"
                                     data-description="2 widgets (5€)"
                                     data-image="/128x128.png">
@@ -121,8 +121,8 @@
                         <form action="" method="POST">
                             <script
                                     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                    data-key="pk_test_sedSyhEwaV5PNjjtizZ40YY1"
-                                    data-amount="2000€"
+                                    data-key="pk_test_p6G8wxXZHtrnWGlWd78UZCYo"
+                                    data-amount="2000"
                                     data-name="Demo Site"
                                     data-description="2 widgets (10€)"
                                     data-image="/128x128.png">
@@ -133,5 +133,8 @@
             </div>
         </div>
     </div>
+    @if(isset($message))
+    <h3>{{$message}}</h3>
+    @endif
 
 @endsection
