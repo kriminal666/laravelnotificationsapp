@@ -18,9 +18,11 @@ Route::get('home', 'HomeController@index');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+    'plans' => 'criminal\PlansController'
 
 ]);
 Route ::get('criminal', 'criminal\criminalController@index');
-Route ::get('plans', 'criminal\PlansController@index');
+/*Route ::get('plans', 'criminal\PlansController@index');*/
 /* when stripe answers, we get token*/
-Route ::post('plans', 'criminal\PlansController@getToken');
+
+/*Route ::post('plans', 'criminal\PlansController@getToken');*/

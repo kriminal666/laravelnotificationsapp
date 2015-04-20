@@ -22,7 +22,7 @@ class PlansController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function getChoose()
     {
 
         return view('plans');
@@ -31,13 +31,14 @@ class PlansController extends Controller {
     /**
      * get response from stripe
      */
-    public function getToken(){
+    public function postChoose(){
 
         //dd(Input::all());
         $token = Input::get('stripeToken');
-        Auth::user()->subscription('basic')->create($token);
+        $plan = Input::get('plan');
+        Auth::user()->subscription($plan)->create($token);
 
-        return view('plans')->withMessage('Transaction successful');
+        return view('plans')->withMessage('Transaction successful')->withPlan($plan);
 
 
 

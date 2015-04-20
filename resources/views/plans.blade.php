@@ -1,6 +1,15 @@
 @extends('app')
 
+
 @section('main-content')
+    <div class="position-relative">
+        @if(isset($message))
+            <h3></h3>
+            <div class="alert alert-info">
+                <strong>{{$message}}, plan: {{ $plan }}</strong> <br>
+            </div>
+        @endif
+    </div>
     <h2>PLANS</h2>
     <div class="col-xs-6 col-sm-3 pricing-box">
         <div class="widget-box widget-color-dark">
@@ -53,13 +62,16 @@
                     <a class="btn btn-block btn-inverse" href="#">
                         <i class="ace-icon fa fa-shopping-cart bigger-110"></i>
                         <form action="" method="POST">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="hidden" name="plan" value="basic">
                             <script
                                     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                     data-key="pk_test_p6G8wxXZHtrnWGlWd78UZCYo"
                                     data-amount="1000"
                                     data-name="Demo Site"
                                     data-description="2 widgets (5€)"
-                                    data-image="/128x128.png">
+                                    data-image="/img/Opml-icon-128x128.png
+">
                             </script>
                         </form>
                     </a>
@@ -119,13 +131,16 @@
                     <a class="btn btn-block btn-warning" href="#">
                         <i class="ace-icon fa fa-shopping-cart bigger-110"></i>
                         <form action="" method="POST">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="hidden" name="plan" value="starter">
                             <script
                                     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                     data-key="pk_test_p6G8wxXZHtrnWGlWd78UZCYo"
                                     data-amount="2000"
                                     data-name="Demo Site"
                                     data-description="2 widgets (10€)"
-                                    data-image="/128x128.png">
+                                    data-image="/img/Opml-icon-128x128.png
+">
                             </script>
                         </form>
                     </a>
@@ -133,8 +148,6 @@
             </div>
         </div>
     </div>
-    @if(isset($message))
-    <h3>{{$message}}</h3>
-    @endif
+
 
 @endsection

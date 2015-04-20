@@ -59,7 +59,7 @@
 
             <ul class="submenu">
                 <li class="">
-                    <a href="/plans">
+                    <a href="/plans/choose">
                         <i class="menu-icon fa fa-caret-right"></i>
                         Plans
                     </a>
