@@ -40,8 +40,6 @@ class PlansController extends Controller {
 
         return view('plans')->withMessage('Transaction successful')->withPlan($plan);
 
-
-
      }
 
 	/**
